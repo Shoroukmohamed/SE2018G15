@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" content="width=device-width, initial-scale=1">
+
+    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  	<title>Doctor Form</title>
+	<style type="text/css">
+		html,body
+        {
+            margin: 0;
+            padding: 0;
+          /*background-color:;*/ 
+        }
+        .nav
+             {
+                 background-color: transparent;
+                 display: inline;
+                 margin: 0;
+                 list-style-type: none;
+                 padding: 0;
+                 display: table-header-group;
+                 position: fixed;
+                 height: 90px;
+                 width: 100%;
+                 top: 0;
+                 left: 0;
+                 z-index: 1;
+                 border-style: none;
+             }
+          
+             ul
+             {
+                 list-style-type: none;
+                 padding: 0;
+                 margin: 0;
+             }
+             .bar
+             {
+                 float: left 50px;
+                 margin: 20px;
+             }
+             li
+             {
+                 display: inline;
+                 color: white;
+                 float: left;
+                 margin-right: 0;
+             }
+             .logo
+             {
+                /* margin-left: 100px;
+                 margin-top: 0;
+                 margin-bottom: 75px;*/
+                 margin: 0 0 0 100px;
+             }
+            li a
+             {
+                display:inline;
+                color:white; 
+                 text-align: center;
+                 padding: 14px 16px;
+                 text-decoration: none;
+                 font-size: 16px;
+                 font-style:normal;
+                 font-family:fantasy;
+                 float: left;
+             }
+            a:hover
+             {
+                color: black;
+             }
+        .container
+        {
+   	    	position: relative;
+            height: 100%;
+            width: 100%;
+            background-color:#8f2950;
+            /*background-image: url(back.jpeg);*/
+            background-repeat: no-repeat;
+            background-size: auto; 
+            text-align: center;
+        }
+      	.back
+      	{
+      		background-color: black;
+      		opacity: 0.2;
+      		width: 550px;
+      		height: 420px;
+      		margin-right: 390px;
+            margin-left: 390px;
+            margin-top: 110px;
+            margin-bottom: 20px;
+            border-radius: 25px;
+      	}
+      	.overlap
+      	{
+      		position: absolute;
+      		width: 550px;
+      		height: 550px;
+      		top: 40px;
+      	}
+        .form
+        {
+          
+            width: 550px;
+            z-index: 1;
+            opacity: 1;
+            text-align: center;
+            position: center;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 390px;
+            margin-left: 390px;
+            font-size: 20px;
+            border-color: #DCDCDC;
+     		border-radius: 5px;
+    		background-opacity :0.1;
+        }
+        form
+        {
+        	align-self :"center";
+        	border-color: #DCDCDC;
+        	border-radius: 5px;
+        	background-opacity :0.1;
+
+        }
+        i
+        {
+        	width: 30px;
+        }
+        input
+        {
+        border: 0;
+        outline: 0;
+       	background: #FDEEF4;
+        /*border-bottom: 1px solid black;*/
+        border-radius: 7px;
+        width: 450px;
+        margin: 10px;
+        color: black; 
+        }
+        #mobile
+        {
+            font-size: 28px;
+        }
+        i
+        {
+        	color: white;
+        	margin: 5px;
+        }
+        .btn
+        {
+        	text-transform: uppercase;
+        	font-size: 17px;
+
+        }
+        .btn-danger {
+   		 	background: transparent;
+    		color: #ffffff;
+    		border-color: #ffffff;
+		}
+		.btn-danger:hover
+		{
+			background: #ffffff;
+    		color: #8f2950;
+    		border-color: #ffffff;
+		}
+		#icons{
+            width: 100%;
+            height: 100px;
+            display: inline-block;
+            font-size: 25px;
+            text-align: center;
+            background-color:white;
+            margin-top: 30px;
+            color: #f1f1f1;
+        }
+        #footer-icons{
+            cursor: pointer;
+            color:black;
+            border-radius: 50%;
+            }
+        
+        #footer-icons:hover{
+            cursor: pointer;
+            color:#8f2950;
+            border-radius: 50%;
+            }
+         #space{
+            width: 100%;
+            height: 30px;
+        }
+         #back{
+            width: 25px;
+            height: 25px;
+            background-color:none;
+            border-radius: 50%;
+            text-align: center;
+            display: inline-block;
+            position: center;
+            padding-right: 40px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+       
+	</style>
+</head>
+<body>
+
+	
+
+	<div class="container">
+			<!--<a class="navbar-brand px-5" href="#" style="display: inline; float: left;">
+        		<img src="logo.png" alt="MOM">
+      		</a>-->
+      	
+      	<div class="nav">
+             <ul>
+              <li>
+                <a href="#" >
+                <img src="logo.png" class="logo" style="float: left; margin-right: 800px">
+                </a>
+              </li> 
+              <li>         
+                <ul>     
+                    <div class="bar">
+                        <li><span><a href="#">HOME   </a></span></li>
+                        <li><a href="#">SIGN UP</a></li>
+                        <li><a href="#">SIGN IN</a></li> 
+                    </div>
+                </ul>
+             </li>
+                </ul>    
+            </div> 
+
+			<!--<p style="display: ;">DOCTORS</p>-->
+			<div class="back"></div>
+			<div class="overlap">
+				
+			<form class="form" id="form">
+				<p style="font-size: 28px; text-align: center; color: white; font-weight: bold;">Doctors Registration</p>
+                            <i class="fa fa-user-circle-o" aria-hidden="true"></i><input class="name" type="text" placeholder="Name" onclick="name();"><br>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i><input class="email" type="email" placeholder="Email"><br>
+                            <i class="fa fa-mobile" aria-hidden="true" id="mobile"></i><input class="mobile" type="text" placeholder="Mobile"><br>
+                            <i class="fa fa-graduation-cap" aria-hidden="true" id="graduate"></i><input class="graduate" type="text" placeholder="Graduated At"><br>
+                       		<i class="fa fa-university" aria-hidden="true" id="university"></i><input class="university" type="text" placeholder="University"><br>
+                       		<i class="fa fa-hospital-o" aria-hidden="true" id="hospital"></i><input class="hospital" type="text" placeholder="Hospital">
+            </form>
+        	</div>
+             <button type="button" class="btn btn-danger" >Sign up</button>
+            <div id="space"></div>
+
+            <div id="icons" style="margin: 0 auto">
+            	
+            <div id="back" style="margin: 0 auto"> <a href="#" class="link"><i class="fa fa-twitter" id="footer-icons"></i></a></div>
+            <div id="back" style="margin: 0 auto"> <a href="#" class="link"><i class="fa fa-facebook" id="footer-icons"></i></a></div>
+            <div id="back" style="margin: 0 auto"><a href="#" class="link"><i class="fa fa-github" id="footer-icons"></i></a></div>
+           
+            <p class="copyright text-muted text-center" style="font-size: 16px; color: grey; margin-top:10px">Copyright &copy; MOM 2018</p>
+
+        
+
+	</div>
+
+
+			  
+
+
+</div>
+
+
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
