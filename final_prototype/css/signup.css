@@ -1,21 +1,15 @@
 
 
 #sb{
-    background:#8f2950;
+    background:#91224C;
     height: 500px;
     width: 100%;
 
 }
 #sa{
-    margin-left:30% ;
+     margin-left:10% ;
     margin-top: 10%;
-}
-button{
-    margin-left:50px;
-    border-radius:3px;
-    color:black;
-    background-color:pink;
-
+    color: white;
       
 }
 .container{
