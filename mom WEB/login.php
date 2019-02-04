@@ -6,9 +6,9 @@
       // username and password sent from form 
       
       $myemail = mysqli_real_escape_string($db,$_POST['email']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+      $mypassword = mysqli_real_escape_string($db,$_POST['pwd']); 
 
-      $sql = "SELECT id FROM mother WHERE email = '$myemail' and password = '$mypassword'";
+      $sql = "SELECT * FROM mother WHERE email = '$myemail' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
      // $active = $row['active'];
@@ -35,49 +35,87 @@
 
 
 
-<html>
-   
-   <head>
-      <title>Login Page</title>
-      
-      <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
-      
-   </head>
-   
-   <body bgcolor = "#FFFFFF">
-	
-      <div align = "center">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Login</b></div>
-				
-            <div style = "margin:30px">
-               
-               <form action = "" method = "post">
-                  <label>Email :</label><input type = "text" name = "email" class = "box"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <input type = "submit" value = " Submit "/><br />
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-            </div>
-				
-         </div>
-			
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link href="css/fontawesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/MOM.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #q{
+    margin-top: 200px;
+    }
+    .h{
+        margin-left: 30%;
+    }
+</style>
+<body>
 
-   </body>
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg navbar-light px-5 fixed-top" >
+            <a class="navbar-brand px-5" href="#">
+              <img src="imgs/logo.png" width="50%" height="50%" alt="MOM">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#momnav" aria-controls="momnav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="momnav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active px-3">
+                  <a class="nav-link" href="MOM.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="#">Nutrition</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="#">Exercises</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="#">Babies</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="#">Log in</a>
+                </li>
+                <li class="nav-item px-3">
+                  <a class="nav-link" href="signup.html">Sign up</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+<div class="bg-secondary">
+<div class="row" id="q" >
+    <div class="col col-sm-6 col-lg-6 col-md-5" ><img class="float-right" src="imgs/4.png"> </div>
+    <div class="col col-sm-6 col-lg-6 col-md-7" class="bg-danger">
+  <h2 class="h">sign in</h2>
+  <form action="" method="post">
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
+    </div>
+</div>
+</body>
 </html>
+
+
+
