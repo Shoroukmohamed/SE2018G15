@@ -11,7 +11,7 @@
       $sql = "SELECT id FROM mother WHERE email = '$myemail' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-      $active = $row['active'];
+     // $active = $row['active'];
       
       $count = mysqli_num_rows($result);
 
@@ -19,8 +19,8 @@
 		
       if($count == 1) 
       {
-         session_register("email");
-         $_SESSION['login_user'] = $myemail;
+    //     session_register("email");
+         $_SESSION['email'] = $myemail;
 
          //go to the mom profile page
 
