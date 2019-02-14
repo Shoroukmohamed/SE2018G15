@@ -1,17 +1,18 @@
 <?php
    include("config.php");
    session_start();
+   $error="";
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
       // username and password sent from form 
       
       $myemail = mysqli_real_escape_string($db,$_POST['email']);
-      $mypassword = mysqli_real_escape_string($db,$_POST['pwd']); 
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
 
       $sql = "SELECT * FROM mother WHERE email = '$myemail' and password = '$mypassword'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-     // $active = $row['active'];
+    //  $active = $row['active'];
       
       $count = mysqli_num_rows($result);
 
@@ -19,16 +20,26 @@
 		
       if($count == 1) 
       {
-    //     session_register("email");
+     //    session_register("email");
          $_SESSION['email'] = $myemail;
 
          //go to the mom profile page
-
-         header("location: welcome.php");
+        header("location: page.php");
       }
       else 
       {
-         $error = "Your Login Name or Password is invalid";
+      	  $sql = "SELECT * FROM doctor WHERE email = '$myemail' and password = '$mypassword'";
+	      $result = mysqli_query($db,$sql);
+	      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+     	  $c = mysqli_num_rows($result);
+     	  if($c == 1) 
+     	  {
+     	  	$_SESSION['email'] = $myemail;
+     	  	//go to the doctor profile page
+       		 header("location: page.php");
+     	  }
+     	  else
+         	$error = "Your Login email or Password is invalid";
       }
    }
 ?>
