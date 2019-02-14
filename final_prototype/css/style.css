@@ -1,0 +1,66 @@
+*{
+	margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: serif;
+    
+    color: #ff1aff;
+    color:#007acc;
+}
+.mySlides{
+	width: 100%;
+	height: 650px;
+
+}
+.container{
+    width: 100%
+
+
+}
+.imgs{
+	width: 70%;
+	float: left;
+	height:650px ;
+	
+}
+.form{
+	width: 30%;
+	
+    background-color: #ffccff;
+    background-color: lightblue;
+	float: left;
+	height: 650px;
+
+}
+form{
+	margin-top: 4%;
+	margin-left: 15%;
+}
+input{
+	width: 80%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border-radius: 10px;
+	font-size: 
+
+}
+select,label{
+	display: block;
+	margin-bottom: 15px;
+}
+select{
+	padding: 8px;
+	border-radius: 5px;
+}
+p{
+	margin-left: 4%;
+	font-style: bolder;
+	font-size:2em; 
+	margin-bottom: 15px;
+}
+label{ 
+	font-size: 1.3em;
+}
+.submit{
+	font-size: 1.2em;
+}
